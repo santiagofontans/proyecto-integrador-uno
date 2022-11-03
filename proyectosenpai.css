@@ -1,0 +1,841 @@
+body {
+    font-family: 'DM Sans';
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* DIV PADRE (ESTRUCTURA DE LA PÁGINA) */
+.padre {
+    display: grid;
+    grid-template-rows: 0.3fr 2fr 3fr 2.1fr 2.5fr 2.3fr 0.5fr;
+    grid-template-areas: 'nav'
+        'header'
+        'segunda'
+        'oportunidades'
+        'noticias'
+        'contacto'
+        'footer';
+}
+
+/* EMPIEZA EL NAV */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'logo enlaces modal boton';
+    grid-column-gap: 30px;
+    max-height: fit-content;
+    grid-area: nav;
+}
+
+.div-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo1 {
+    width: 50%;
+    height: 50%;
+    background-image: url("Materiales/logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: logo;
+}
+
+.enlaces {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: enlaces;
+}
+
+button {
+    background-color: #7749f8;
+    color: white;
+    font-size: 80%;
+    height: 45px;
+    width: 165px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton {
+    grid-area: boton;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL */
+.modal {
+    display: grid;
+    width: 1200px;
+    height: 700px;
+    border-radius: 20px;
+    grid-template-columns: 1fr 1fr;
+    background-color: rgb(236, 236, 236);
+    grid-area: modal;
+    position: fixed;
+    visibility: hidden;
+    top: 20%;
+    left: 26%;
+}
+
+.izquierda {
+    background-image: url(./Materiales/imagen-modal.JPG);
+    background-size: cover;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.derecha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 2fr 2fr;
+}
+
+.arriba-derecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cruz {
+    width: 20px;
+    height: 20px;
+    margin: 100%;
+}
+
+.mi-empresa {
+    width: 500px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.mi-empresa-texto {
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mi-organizacion-texto {
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.estamos-para {
+    font-size: 90%;
+    margin: 6%;
+    color: rgb(135, 135, 135);
+}
+
+.mi-organizacion {
+    width: 500px;
+    height: 140px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.maletin-empresa {
+    background-color: #5298ff;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.titulo-empresa-modal {
+    color: #5298ff;
+}
+
+.maletin-empresa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.maletin-icono {
+    width: 50%;
+}
+
+.usuario-organizacion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usuario-icono {
+    width: 50%;
+}
+
+.titulo-organizacion-modal {
+    color: #7749f8;
+}
+
+.usuario-organizacion {
+    background-color: #7749f8;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.registrar {
+    display: flex;
+    justify-content: center;
+}
+
+/* EMPIEZA EL HEADER */
+header {
+    color: white;
+    text-align: center;
+    background-size: 100% 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(materiales/manos.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: header;
+}
+
+h1 {
+    font-size: 260%;
+}
+
+.actua {
+    width: 40%;
+}
+
+/* SECCION NOSOTROS */
+.segunda {
+    background-color: #5298ff;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "segunda1"
+        "segunda2";
+    padding-top: 100px;
+    padding-bottom: 100px;
+    grid-area: segunda;
+}
+
+.segunda1 {
+    grid-area: segunda1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.segunda2 {
+    grid-area: segunda2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-grupo {
+    height: 40vh;
+    width: 43vw;
+    background-image: url(./Materiales/oficina.png);
+    background-size: cover;
+}
+
+.empresas {
+    height: 40vh;
+    width: 43vw;
+    background-color: #5298ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-nosotros {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.imagen-latas {
+    height: 40vh;
+    width: 43vw;
+    background-image: url(./Materiales/voluntariado.jpg);
+    background-size: cover;
+}
+
+.organizaciones {
+    height: 40vh;
+    width: 43vw;
+    background-color: #5298ff;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* SECCION NOSOTROS 2 */
+
+.nosotros {
+    grid-area: oportunidades;
+}
+
+.nosotros-texto {
+    color: rgb(7, 4, 38);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 5%;
+}
+
+.oportunidades {
+    display: flex;
+    justify-content: space-around;
+    padding: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 200%;
+}
+
+.caja-color {
+    width: 370px;
+    height: 310px;
+    border-radius: 7%;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'mano mas'
+        'voluntario voluntario';
+}
+
+.icono-centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voluntario {
+    background-color: #dc3545;
+}
+
+.mano1 {
+    grid-area: mano;
+}
+
+.icono-mas {
+    grid-area: mas;
+}
+
+.ser-voluntario {
+    grid-area: voluntario;
+}
+
+.donar {
+    background-color: #ff9c07;
+}
+
+.mano2 {
+    grid-area: mano;
+}
+
+.icono-mas {
+    grid-area: mas;
+}
+
+.texto-donar {
+    grid-area: voluntario;
+}
+
+.reciclar {
+    background-color: #28a745;
+}
+
+.reciclar-logo {
+    grid-area: mano;
+}
+
+.icono-mas {
+    grid-area: mas;
+}
+
+.texto-reciclar {
+    grid-area: voluntario;
+}
+
+.llamados {
+    background-color: #17a2b8;
+}
+
+.maletin {
+    grid-area: mano;
+}
+
+.icono-mas {
+    grid-area: mas;
+}
+
+.texto-llamados {
+    grid-area: voluntario;
+    margin-left: 22%;
+    font-size: 90%;
+}
+
+/* NOTICIAS */
+
+.noticias {
+    background-color: #5298ff;
+    padding-top: 2%;
+    grid-area: noticias;
+}
+
+.noticias-titulo {
+    text-align: center;
+    color: white;
+}
+
+.seccion-noticias {
+    display: flex;
+    justify-content: space-around;
+    margin: 10%;
+    margin-top: 3%;
+}
+
+.noticia {
+    width: 400px;
+    height: 700px;
+    border-radius: 2%;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 45% 5% 35% 15%;
+    grid-template-areas: 'foto'
+        'fecha'
+        'texto'
+        'ver';
+}
+
+
+.imagen-noticia {
+    background-size: cover;
+    border-radius: 2%;
+    display: flex;
+    align-items: flex-end;
+    grid-area: foto;
+}
+
+.imagenNoticia1 {
+    background-image: url(Materiales/perros.jpg);
+}
+
+.imagenNoticia2 {
+    background-image: url(Materiales/casa.jpg);
+}
+
+.imagenNoticia3 {
+    background-image: url(Materiales/voluntarios.jpg);
+}
+
+.imagenNoticia4 {
+    background-image: url(Materiales/construccion.jpg);
+}
+
+.boton-noticia {
+    margin-bottom: 20%;
+    margin-left: 20%;
+    height: 40%;
+    width: 100%;
+}
+
+.fecha-reloj {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-area: fecha;
+    padding: 2% 5%;
+}
+
+.reloj {
+    display: flex;
+    align-items: center;
+}
+
+.texto-noticias {
+    grid-area: texto;
+    padding: 0 5%;
+}
+
+.ver-mas {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 5%;
+    grid-area: ver;
+}
+
+/* CONTACTO */
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'laptop form';
+    grid-area: contacto;
+}
+
+.seccion-laptop {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.foto-laptop {
+    height: 50%;
+    width: 80%;
+    background-image: url(./materiales/laptop-escritorio.jpg);
+    background-size: cover;
+    grid-area: laptop;
+
+}
+
+form {
+    height: 63%;
+    width: 80%;
+    grid-area: form;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-areas: 'contacto contacto'
+        'dato1 mensaje'
+        'dato2 mensaje'
+        'enviar enviar';
+    margin-bottom: 7%;
+    margin-top: 10%;
+    margin-left: 3%;
+}
+
+.titulo-contacto {
+    grid-area: contacto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 250%;
+}
+
+.dato1 {
+    grid-area: dato1;
+}
+
+.dato2 {
+    grid-area: dato2;
+}
+
+.mensaje {
+    grid-area: mensaje;
+}
+
+.input1 {
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.input2 {
+    width: 80%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.input3 {
+    width: 80%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.enviar {
+    grid-area: enviar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #7749f8;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 'logo enlaces enlaces redes'
+        'copyright copyright copyright copyright';
+    grid-area: footer;
+}
+
+.logo-footer {
+    background-image: url(./Materiales/logo-blanco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-area: logo;
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 35%;
+}
+
+.links {
+    grid-area: enlaces;
+    color: white;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blanco {
+    color: white;
+}
+
+.redes {
+    grid-area: redes;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: copyright;
+}
+
+@media only screen and (max-width: 390px) {
+    /* body {
+        display: flex;
+        flex-direction: column;
+    } */
+
+    .padre {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.03fr 0.2fr 0.8fr 1fr 0.3fr 0.08fr;
+        grid-template-areas: 'nav'
+            'header'
+            'segunda'
+            'oportunidades'
+            'contacto'
+            'footer';
+    }
+
+    /* NAV */
+    .noticias {
+        display: none;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-areas: 'logo hamburguesa';
+        grid-column-gap: 10px;
+        max-height: fit-content;
+        /* width: 100%; */
+        height: 8vh;
+        background-color: #8d6fe0;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    .enlaces {
+        display: none;
+    }
+
+    .boton {
+        display: none;
+    }
+
+    .div-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5%;
+    }
+
+    .hamburguesa {
+        grid-area: hamburguesa;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 10%;
+    }
+
+    /* HEADER */
+    .actua {
+        width: 90%;
+        color: aliceblue;
+    }
+
+    .manos {
+        background-image: url(./Materiales/manosquery3.webp);
+    }
+
+    /* SEGUNDA */
+
+    .segunda {
+        padding-top: 35px;
+        background-color: #8d6fe0;
+        padding-bottom: 0%;
+    }
+
+    .imagen-grupo {
+        width: 90vw;
+        margin-left: 3%;
+        border-radius: 20px;
+    }
+
+    .empresas {
+        display: block;
+        background-color: #8d6fe0;
+    }
+
+    .organizaciones {
+        display: block;
+        background-color: #8d6fe0;
+        margin: 0%;
+    }
+
+    .segunda1 {
+        display: block;
+    }
+
+    .segunda2 {
+        display: block;
+    }
+
+    .texto-nosotros {
+        width: 185%;
+        margin-left: 10%;
+    }
+
+    .titulo-empresas {
+        width: 150%;
+        margin-left: 40%;
+        font-size: 80%;
+    }
+
+    .titulo-organizaciones {
+        width: 150%;
+        margin-left: 40%;
+        font-size: 80%;
+    }
+
+    .imagen-latas {
+        width: 90vw;
+        margin-left: 3%;
+        border-radius: 20px;
+        margin-top: 100px;
+    }
+
+    /* OPORTUNIDADES */
+
+    .oportunidades {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .voluntario {
+        margin: 5%;
+    }
+
+    .donar {
+        margin: 5%
+    }
+
+    .reciclar {
+        margin: 5%
+    }
+
+    .llamados {
+        margin: 5%
+    }
+
+    .contacto {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'form';
+        justify-content: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .enviar {
+        margin-top: 20%;
+    }
+
+    .foto-laptop {
+        display: none;
+    }
+
+    .dato1 {
+        margin-bottom: 5%;
+    }
+
+    .dato2 {
+        margin-bottom: 5%;
+    }
+
+    footer {
+        height: 290px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        font-size: 90%;
+        padding: 4%;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 20%;
+    }
+
+    .copyright {
+        display: flex;
+        text-align: center;
+    }
+
+    .logo-footer {
+        margin-top: 27%;
+        margin-left: 15%;
+        width: 90%;
+    }
+
+    .modal {
+        display: none;
+    }
+
+
+}
